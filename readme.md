@@ -9,7 +9,7 @@ Initially, at $$t=0$$, $$x = X $$.
 | Hyperbolic | Elliptical | Parabolic |
 |----------|----------|----------|
 | The general equation of a hyperbola is: $$\frac{x^2}{a^2} - \frac{y^2}{b^2} = 1$$ | $$\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1 $$  | $$y = ax^2 + bx + c $$  |
-| Wave Equation: $$\frac{\partial^2 u}{\partial t^2} - c^2 \nabla^2 u = 0$$ | Laplace Equation: $$\frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} = 0$$ |  Diffusion Equation : $$\frac{\partial u}{\partial t} = D \nabla^2 u $$|
+| Wave Equation: $$\frac{\partial^2 u}{\partial t^2} - c^2 \nabla^2 u = 0$$ | Laplace Equation: $$\frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} = 0$$  Elasticity equation: $$\nabla^2 \sigma  + b = 0$$ |  Diffusion Equation : $$\frac{\partial u}{\partial t} = D \nabla^2 u $$|
 |   | Poisson's Equation : $$\nabla^2 u = f(x, y)$$ | |
 | Generally time-dependent | Generally time-independent | Exhibit steady-state behavior over time |
 
@@ -32,6 +32,14 @@ Volumetric locking can be avoided for these elements by using:
 1. reduced integration (i.e. one-point quadrature)  
    * One-point quadrature may suffer from pressure oscillations (called checkerboardind) and other instabilities(e.g. hourglass).  
    * One-point quadrature with hourglass control is very fast.  
-3. selective-reduced integration i.e. one-point quadrature on volumetric terms and 2 $$\times$$ 2 quadrature on deviatoric terms. 
+3. selective-reduced integration i.e. one-point quadrature on volumetric terms and 2 $$\times$$ 2 quadrature on deviatoric terms.
+
+## Verification and Validation
+### Verification
+Verification is the process of determining whether the FEA framework (i.e. mathematical implementation) implemented is correct or not. 
+
+
+
+
 
 
