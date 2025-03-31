@@ -9,7 +9,7 @@ Initially, at $$t=0$$, $$x = X $$.
 | Hyperbolic | Elliptical | Parabolic |
 |----------|----------|----------|
 | The general equation of a hyperbola is: $$\frac{x^2}{a^2} - \frac{y^2}{b^2} = 1$$ | $$\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1 $$  | $$y = ax^2 + bx + c $$  |
-| Wave Equation: $$\frac{\partial^2 u}{\partial t^2} - c^2 \nabla^2 u = 0$$ | Laplace Equation: $$\frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} = 0$$  Elasticity equation: $$\nabla^2 \sigma  + b = 0$$ |  Diffusion Equation : $$\frac{\partial u}{\partial t} = D \nabla^2 u $$|
+| Wave Equation: $$\frac{\partial^2 u}{\partial t^2} - c^2 \nabla^2 u = 0$$ | Laplace Equation: $$\frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} = 0$$  Elasticity equation: $$\nabla \sigma  + b = 0$$ |  Diffusion Equation : $$\frac{\partial u}{\partial t} = D \nabla^2 u $$|
 |   | Poisson's Equation : $$\nabla^2 u = f(x, y)$$ | |
 | Generally time-dependent | Generally time-independent | Exhibit steady-state behavior over time |
 
@@ -34,9 +34,35 @@ Volumetric locking can be avoided for these elements by using:
    * One-point quadrature with hourglass control is very fast.  
 3. selective-reduced integration i.e. one-point quadrature on volumetric terms and 2 $$\times$$ 2 quadrature on deviatoric terms.
 
-## Verification and Validation
+## Verification and Validation (wip)
 ### Verification
 Verification is the process of determining whether the FEA framework (i.e. mathematical implementation) implemented is correct or not. 
+
+## Weak Forms and Strong Forms
+The strong form for elliptic elasticity PDE at steady-state is :  
+$$\nabla \sigma + b =0$$  
+This statement means that the **divergence** of $$\sigma$$ is equal to $$-b$$ at equilibrium. This refers to the fact that for the body to be in equilibrium the sum of forces has to be equal to zero i.e. force/stress moving into one end must come out of the other end.
+
+**NO FORCE IS CREATED INSIDE THE BODY!**
+## Strong form
+If we take a PDE, then its solution will be of form $$u$$, which may be an $$n$$-dimensional vector. This vector exists in some $$n$$-dimensional space called Sobelov space.
+
+We approximate this solution $$u$$ using a solution $$u_h$$. We do this using a polynomial $$p$$. Generally, an error exists between this approximate solution $$u_h$$ and the ideal solution $$u$$ because:
+* The domain may be complex and is discretized using element of size $$h$$. Due to this a curve is no longer a curve but a collection of discrete segments. This casues a loss of data/information.
+* The size of the polynomial and the type of polynomial may not be enough to capture the complex behavior of domains.
+* The choice of the polynomial may be influenced not only by what can represent the physics and capture the deformation well, but also computational factors.
+
+**Due to these, the approximate solution $$u_h$$ may not satisfy the PDE exactly**
+
+We ideally want to solve the PDE ($$\nabla \sigma + b =0) to get $$u$$. However, as mentioned before, the best we can do is to get an approximate solution $$u_h$$ that satisfies the PDE *weakly* i.e. Strong form cannot be satisfied for all the points of the domain. We want something that can be satisfied in an average sense.This is where weak form comes into picture  
+
+$$\int_{\Omega} (\nabla \sigma + b) f_t d\Omega = 0$$ to get $$u_h$$.
+
+The error is then defined as :
+$$||u-u_h||$$
+ 
+
+
 
 
 
