@@ -54,7 +54,7 @@ We approximate this solution $$u$$ using a solution $$u_h$$. We do this using a 
 
 **Due to these, the approximate solution $$u_h$$ may not satisfy the PDE exactly**
 
-We ideally want to solve the PDE ($$\nabla \sigma + b =0) to get $$u$$. However, as mentioned before, the best we can do is to get an approximate solution $$u_h$$ that satisfies the PDE *weakly* i.e. Strong form cannot be satisfied for all the points of the domain. We want something that can be satisfied in an average sense.This is where weak form comes into picture  
+We ideally want to solve the PDE ($$\nabla \sigma + b =0$$) to get $$u$$. However, as mentioned before, the best we can do is to get an approximate solution $$u_h$$ that satisfies the PDE *weakly* i.e. Strong form cannot be satisfied for all the points of the domain. We want something that can be satisfied in an average sense.This is where weak form comes into picture  
 
 $$\int_{\Omega} (\nabla \sigma + b) f_t d\Omega = 0$$ to get $$u_h$$.
 
