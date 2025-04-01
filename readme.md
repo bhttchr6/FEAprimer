@@ -80,6 +80,29 @@ $$\alpha = min(2 - 0, r-0)$$
 
 The value of $$r$$ for smooth solutions i.e. no discontinuites or cracks is $$\infty$$. Then the value of $$\alpha$$ for smooth solution fields is 2. The rate of convergence of these elements for $$H_0$$ or $$L_2$$ norm is 2. The rate of convergence in $$H_1$$ i.e. for  strain, is then 1. 
 
+# Explicit vs Implicit Analysis
+## Explicit Analysis
+
+Explicit analysis is used to simulate events that last over a very short period of time e.g. car crash, drop test, impact, ballistics etc. Explicit analysis has the following charateristics:
+* Explicit analysis does not check for convergance in each time step
+* Explicit analysis does not solve for equilibrium at each step.
+* Explicit analysis does not perform matrix inversion.
+* Explicit analysis is conditionally stable. The stability condition is called Courant Freidrichs Lewy (CFL) condition.
+
+### CFL condition
+CFL condition states that the explicit analysis will be stable if:  
+  
+$$\Delta t <= t_{crit}$$
+
+The term $$t_{crit}$$ is defined as :
+
+$$t_{crit} = f \frac{L}{c}$$
+
+where, the parameters $$f$$ is a scaling factor with value less than or equal to 1. The term $$L$$ is the charateristic length of the smallest element in the mesh and $$c$$ is the speed of stress wave. The stress wave propogating inside a medium can be compression waves or shear waves. It has been found that the compression waves travel faster than shear waves and its speed is equal to the speed of the sound. Hence $$c$$ is usually taken as the speed of sound inside the medium. 
+
+**Characteristic Length**
+
+Characteristic length of an element is defined as the 
 
 
 
