@@ -68,6 +68,15 @@ The error is distance between two vectors $$u$$ and $$u_h$$. But these two vecto
 $$||u -u_h||_{H_m}$$
  
 As a rule of thumb, $$m=0$$ if we want to measure the norm of $$C^0$$ parameters e.g. displacement. The value of $$m=1$$ for $$C^1$$ parameters i.e. strain.
+### Quantifying error
+
+The error can be quantified:
+$$||u-u_h|| <= Ch^\alpha{u}_{Hr}$$
+where
+$$\alpha = min(k+1 -m, r-m)$$
+
+Let us see what these complicated terms mean. The elements like 3 node triangular element, 4 node quad element, 4 node tetrahedral element and 8 node hexahedral element can completely represent a polynomial function of order 1 i.e. $$k=1$$. That means the value of alpha for these elements would be:
+$$\alpha = min(2 - 0, r-0)$$
 
 
 
