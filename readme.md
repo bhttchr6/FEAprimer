@@ -78,6 +78,8 @@ $$\alpha = min(k+1 -m, r-m)$$
 Let us see what these complicated terms mean. The elements like 3 node triangular element, 4 node quad element, 4 node tetrahedral element and 8 node hexahedral element can completely represent a polynomial function of order 1 i.e. $$k=1$$. That means the value of alpha for these elements would be:
 $$\alpha = min(2 - 0, r-0)$$
 
+The value of $$r$$ for smooth solutions i.e. no discontinuites or cracks is $$\infty$$. Then the value of $$\alpha$$ for smooth solution fields is 2. The rate of convergence of these elements for $$H_0$$ or $$L_2$$ norm is 2. The rate of convergence in $$H_1$$ is then 1. 
+
 
 
 
