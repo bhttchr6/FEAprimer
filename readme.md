@@ -102,7 +102,9 @@ where, the parameters $$f$$ is a scaling factor with value less than or equal to
 
 **Characteristic Length**
 
-Characteristic length of an element is defined as the 
+Characteristic length of an element is defined as the shown below. 
+
+![Alt Text](https://github.com/bhttchr6/FEAprimer/blob/main/CharacteristicLength.png)
 
 
 
