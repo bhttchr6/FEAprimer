@@ -59,9 +59,15 @@ We ideally want to solve the PDE ($$\nabla \sigma + b =0$$) to get $$u$$. Howeve
 $$\int_{\Omega} (\nabla \sigma + b) f_t d\Omega = 0$$ to get $$u_h$$.
 
 The error is then defined as :
-$$||u-u_h||$$
- 
 
+$$||u-u_h||$$
+
+## Normalise Norms!
+The error is distance between two vectors $$u$$ and $$u_h$$. But these two vectors may have different dimensions, so in which space do we take the norm. Mathematically we take the norm in *Hilbert space*. The norms are defined as:
+
+$$||u -u_h||_{H_m}$$
+ 
+As a rule of thumb, $$m=0$$ if we want to measure the norm of $$C^0$$ parameters e.g. displacement. The value of $$m=1$$ for $$C^1$$ parameters i.e. strain.
 
 
 
