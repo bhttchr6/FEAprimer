@@ -106,6 +106,8 @@ Characteristic length of an element is defined as the shown below.
 
 ![Alt Text](https://github.com/bhttchr6/FEAprimer/blob/main/CharacteristicLength.png)
 
+### Hourglass, Shear Locking and Volumetric Locking
+
 
 
 
