@@ -109,7 +109,7 @@ Characteristic length of an element is defined as the shown below.
 ### Hourglass, Shear Locking and Volumetric Locking
 
 ### Bonded layers 
-![Bonded layers and stress analysis](https://wp.optics.arizona.edu/optomech/wp-content/uploads/sites/53/2016/10/chen-1979.pdf)
+[Bonded layers and stress analysis](https://wp.optics.arizona.edu/optomech/wp-content/uploads/sites/53/2016/10/chen-1979.pdf)
 
 
 
