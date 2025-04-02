@@ -111,6 +111,9 @@ Characteristic length of an element is defined as the shown below.
 ### Bonded layers 
 [Bonded layers and stress analysis](https://wp.optics.arizona.edu/optomech/wp-content/uploads/sites/53/2016/10/chen-1979.pdf)
 
+# Columns and Beams (Teaching PPT)
+[Theory of beams and columns](https://github.com/bhttchr6/FEAprimer/blob/main/Teaching_PPT.pdf)
+
 
 
 
