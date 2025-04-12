@@ -107,6 +107,7 @@ Characteristic length of an element is defined as the shown below.
 ![Alt Text](https://github.com/bhttchr6/FEAprimer/blob/main/CharacteristicLength.png)
 
 ### Hourglass, Shear Locking and Volumetric Locking
+Hourglass: There are two ways of integrating using gauss-quadrature
 
 ### Bonded layers 
 [Bonded layers and stress analysis](https://wp.optics.arizona.edu/optomech/wp-content/uploads/sites/53/2016/10/chen-1979.pdf)
