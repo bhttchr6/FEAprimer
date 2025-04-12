@@ -148,6 +148,12 @@ answer> They suffer from the problem of pressure-fluctuation (checkerboaring) an
 Q> How to avoid these instabilities?
 answer> Hourglass stabilization with reduced integration can work for these elements.
 
+Q> Why do we use higher order elements?
+answer> Higher order elements for linear elastic problems can provide higher accuracy as compared to low-order elements.
+
+Q> Then why not use higher order elements for nonlinear problems as well?
+answer> Higher order elements are not well suited for dynamics and large-deformation with Lagrangian meshes. It is difficult to generate good diagonal mass matrices for these elements. 
+
 
 
 
