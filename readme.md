@@ -107,7 +107,7 @@ Characteristic length of an element is defined as the shown below.
 ![Alt Text](https://github.com/bhttchr6/FEAprimer/blob/main/CharacteristicLength.png)
 
 ### Hourglass, Shear Locking and Volumetric Locking
-Hourglass: There are two ways of integrating using gauss-quadrature
+Hourglass: There are two ways of integrating using gauss-quadrature formula. Let us say that we have a 2D QUAD element. We can use the full $$2\times2$$ quadrature or we can use the reduced integration method that basically uses only a single integration point at the center of the element. If we use the full $$2\times2$$ quadrature formula then the ramk of the stiffness matrix is: Total number of degrees of freedom - the number of rigid body motions i.e. 8 - 3 (2 translations and 1 rotation) = 5. If instead we use only 1 integration point then we not only have the 3 rigid body motions (i.e. the motions that do not produce any strain energy) but also 2 other types of motions that does not produce any strain energy so the rank decreases to 3. Thus under reduced integration the stiffness matrix becomes rank deficient. These zero-energy modes are called hourglass modes. 
 
 ### Bonded layers 
 [Bonded layers and stress analysis](https://wp.optics.arizona.edu/optomech/wp-content/uploads/sites/53/2016/10/chen-1979.pdf)
