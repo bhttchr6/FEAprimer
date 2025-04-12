@@ -121,6 +121,33 @@ Volumetric Locking: If we use full integration for say hexahedral elements then 
 # Columns and Beams (Teaching PPT)
 [Theory of beams and columns](https://github.com/bhttchr6/FEAprimer/blob/main/Teaching_PPT.pdf)
 
+Question: What are simplex elements?
+Answer: For 2D, the dim = 2 then simplex element in 2D is collection of dim + 1 = 3 points i.e. a triangle. For 3D, simplex element has dim+1 nodes, so 4 nodes i.e a tetrahedral element. 
+
+Q> What are issues with simplex elements?
+Answer> For plane strain problem and for incompressible and nearly incompressible materials, simplex elements tend to display volumetric locking. Simplex elements also exhibit shear locking ( or stiff behavior in bending).
+
+Q> What is difference between volumetric locking and shear locking?
+answer> Volumetric locking does not converge but stiff behavior(shear locking) converges but the accuracy is very low for coarse meshes. Thus even though stiff behavior is not as bad a volumetric locking, it hampers accurate simulation on coarse meshes.
+
+Q> Why use 4 node Quad element or 8 node hexahedral element when simplex elements exist?
+answer> 4 node QUAD and 8 node hexahedral elements provide better accuracy over simplex elements.
+
+Q> What are the disadvantages associated with QUAD and HEX elements?
+answer> For full integration i.e. $$2\times2$$ for 2D and $$2\times2\times2$$ on 3D, these elements exhibit volumetric locking for incompressible or nearly0incompressible materials. The also show shear locking (stiff behavior) in bending.
+
+Q> How can you avoid these disadvantages?
+answer> We can use uniorm reduced integration or selective reduced integration to avoid these behavior.
+
+Q> what is the difference between uniformm reduced integration and selective reduced integration (SRI)?
+answer> Uniform reduced integration using one-pointt quadrature for integration of both volumetric ad deviatoric terms while SRI uses one-point on volumetric terms and full integration on deviatoric terms.
+
+Q> Then why not use it everywhere?
+answer> They suffer from the problem of pressure-fluctuation (checkerboaring) and spatial instability in the form of hourglass, spurious modes, zero-energy modes, chickewiring etc. 
+
+Q> How to avoid these instabilities?
+answer> Hourglass stabilization with reduced integration can work for these elements.
+
 
 
 
