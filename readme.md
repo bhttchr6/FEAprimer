@@ -172,6 +172,14 @@ Q> For elastic-plastic materials does higher-order elements work better than low
 
 answer> Elastic-plastic material model is continuous in displacement but is not differentiable everywhere because of the existance of a sharp kink in the stress-strain plot. Thus the strain is $$C^0$$. If strain is $$C^0$$ then displacement is $$C^1$$.  
 
+Q> Is the wavespeed in elastic-plastic material higher or lower than elastic material?
+
+answer> wavespeed is proportional to stiffness and inversely proportional to density of the material. Since for the same density of material, a plastic material will have lower stiffness as compared to elastic material, hence the wavespeed is lower for plastic mateial.
+
+Q> If the wavespeed for elasto-plastic material is lower than elastic material and since the critical time step is inversely proportional to wavespeed does that mean we can use higher time step size for plastic material?
+
+answer> No. This is because a elasto-plastic material can unload at any moment, sometimes due to numerical noise. During the unloading step, the path followed is elastic which has higher wavespeed and hence if timestep is higher than the critical time step is, the solution will blow up. 
+
 
 
 
