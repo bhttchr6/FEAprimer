@@ -180,6 +180,18 @@ Q> If the wavespeed for elasto-plastic material is lower than elastic material a
 
 answer> No. This is because a elasto-plastic material can unload at any moment, sometimes due to numerical noise. During the unloading step, the path followed is elastic which has higher wavespeed and hence if timestep is higher than the critical time step is, the solution will blow up. 
 
+Q> what is mass scaling?
+
+answer> The mass of very small elements (i.e. the elements that control the time-step size) is increased to increase the overall step size.
+
+Q> is mass scaling the only approach?
+
+answer> no subcycling is also available. In sub-cycling the time-step size for only the stiff elements/small elements are reduced.
+
+Q> Can mass scaling be used for every situation?
+
+answer> No, mass scaling can only be used when high-frequency effects are not important. e.g. sheet-metal forming. Sheet-metal forming process is essentially a static process. 
+
 
 
 
